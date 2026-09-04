@@ -2,17 +2,29 @@
 
 A Werewolf (Mafia-style) game plugin for Spigot 1.16+.
 
-## Fix in this commit
+## Recent changes
 
-**Map selector `{player}` placeholder bug**
+### Map selector `{player}` placeholder
+Fixed broadcast to show the real player name.
 
-Previously, when a player selected a map, the broadcast message showed the literal text `{player} selected map ...` instead of the player's name.
+### Lobby scoreboard
+- Title: **WEREWOLF**
+- Win count leaderboard (top 5)
+- Players: `count/max`
+- IP: `play.werewolf.net`
 
-Fixed in `Arena.selectMap()` and `Arena.selectRandomMap()` by correctly passing the `player` placeholder:
+### Game scoreboard
+- Phase timer removed (phase + day + alive/dead + votes remain)
 
-```java
-MessageUtil.ph("player", player.getName(), "world", worldName)
-```
+### Player-head GUIs (Seer, Sheriff, Cupid, Spectator)
+- Inventory size auto-scales with alive player count:
+  - 1–9 → 9 slots
+  - 10–18 → 18 slots
+  - up to 54 max
+
+### Join / leave
+- Vanilla join/leave messages disabled
+- Only in-game messages: `{player} joined the game! (count/max)`
 
 ## Build
 
@@ -22,7 +34,4 @@ mvn clean package
 
 Output: `target/Werewolf.jar`
 
-## Requirements
-
-- Spigot / Paper 1.16.5+
-- Java 17+
+Requires Java 17+ and Spigot API 1.16.5.
