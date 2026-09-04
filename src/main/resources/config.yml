@@ -1,0 +1,132 @@
+# Werewolf Plugin Configuration
+
+# Minimum players required to start a game
+max-players: 16
+min-players: 4
+
+# Day phase duration in seconds
+day-duration: 120
+
+# Night phase duration in seconds
+night-duration: 60
+
+# Ability cooldowns in seconds (for reusable abilities)
+transform-cooldown: 10
+ninja-cooldown: 15
+
+# Mermaid freeze duration in seconds (how long werewolf kills are blocked after singing)
+mermaid-freeze-duration: 15
+
+# Sheriff election duration in seconds (after roles assigned, before first night)
+election-duration: 30
+
+# Lobby (waiting) duration in seconds after minimum players reached
+lobby-duration: 30
+
+# Whether to use the world's natural day/night cycle (false = force time)
+use-natural-time: false
+
+# Messages prefix
+prefix: "&8[&cWerewolf&8] &r"
+
+# Default language code (matches messages/message_<code>.yml)
+default-language: en
+
+# Role distribution weights (higher = more likely)
+role-weights:
+  werewolf: 1
+  villager: 1
+  witch: 1
+  seer: 1
+  hunter: 1
+  trickster: 1
+  ninja: 1
+  mermaid: 1
+  masochist: 1
+  cupid: 1
+
+# Items (names come from messages/message_*.yml items.* — not from config)
+items:
+  role-selector:
+    material: NETHER_STAR
+    slot: 3
+  map-selector:
+    material: MAP
+    slot: 5
+  language-selector:
+    material: BOOK
+    slot: 7
+  vote-sheriff:
+    material: PAPER
+    slot: 0
+  skip-day:
+    material: CLOCK
+    slot: 2
+  vote-sword:
+    material: STONE_SWORD
+    slot: 0
+  revoke-vote:
+    material: PAPER
+    slot: 1
+  seer-book:
+    material: BOOK
+    slot: 0
+  witch-poison:
+    material: POTION
+    slot: 1
+  witch-heal:
+    material: POTION
+    slot: 2
+  hunter-target:
+    material: COMPASS
+    slot: 0
+  werewolf-axe:
+    material: NETHERITE_AXE
+    slot: 0
+  werewolf-armor:
+    material: NETHERITE_CHESTPLATE
+    slot: 0
+  role-info-book:
+    material: WRITTEN_BOOK
+    slot: 8
+  setup-info:
+    material: PAPER
+    slot: 7
+  wolf-team:
+    material: RED_WOOL
+    slot: 6
+  ninja-book:
+    material: ENCHANTED_BOOK
+    slot: 0
+  ninja-ability:
+    material: ENDER_EYE
+    slot: 3
+  mermaid-shell:
+    material: NAUTILUS_SHELL
+    slot: 1
+  cupid-bow:
+    material: BOW
+    slot: 2
+  seer-lamp:
+    material: LANTERN
+    slot: 4
+  spectator-compass:
+    material: COMPASS
+    slot: 0
+  entertaining-settings:
+    material: JUKEBOX
+    slot: 6
+  visibility-settings:
+    material: COMPASS
+    slot: 4
+
+# Visibility settings (defaults; can be changed in-game via lobby GUI)
+visibility:
+  nametags:
+    election: true
+    day: true
+    night: false
+  locator-bar:
+    election: false
+    day: true
+    night: false
